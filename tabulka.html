@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotbal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/flag-icons/css/flag-icons.min.css">
+    <style>
+        .col-small {
+            width: 1%;
+        }
+        .col-medium {
+            width: 10%;
+        }
+        .col-large {
+            width: 60%;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .main {
+            flex: 1;
+        }
+        .footer {
+            background-color: lightgray;
+            text-align: center;
+            padding: 10px;
+        }
+        .fi {
+            border: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Hlavní stránka</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carousel.html">Carousel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tabulka.html">Tabulka</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="karty.html">Karty</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+
+        <!-- Main content -->
+        <div class="main">
+            <!-- Your main content goes here -->
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="col-small">Datum</th>
+                        <th class="col-medium">Domácí</th>
+                        <th class="col-medium">Hosté</th>
+                        <th class="col-small">Výsledek</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-small">23.6.2024</td>
+                        <td class="col-medium"><span class="fi fi-cz"></span> SK Sigma Olomouc</td>
+                        <td class="col-medium"><span class="fi fi-pl"></span> Pogoň Štětín</td>
+                        <td class="col-small">1:1</td>
+                    </tr>
+                    <tr>
+                        <td class="col-small">28.6.2024</td>
+                        <td class="col-medium"><span class="fi fi-pl"></span> Jagellonia Bialystok</td>
+                        <td class="col-medium"><span class="fi fi-cz"></span> SK Sigma Olomouc</td>
+                        <td class="col-small">1:1</td>
+                    </tr>
+                    <tr>
+                        <td class="col-small">3.7.2024</td>
+                        <td class="col-medium"><span class="fi fi-cz"></span> SK Sigma Olomouc</td>
+                        <td class="col-medium"><span class="fi fi-sk"></span> AS Trenčín</td>
+                        <td class="col-small">3:0</td>
+                    <tr>
+                        <td class="col-small">6.7.2024</td>
+                        <td class="col-medium"><span class="fi fi-cz"></span> SK Sigma Olomouc</td>
+                        <td class="col-medium"><span class="fi fi-sk"></span> MŠK Žilina</td>
+                        <td class="col-small">2:0</td>
+                     </tr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer bg-light text-center text-lg-start">
+            <div class="text-center p-3">
+                © 2023 Fotbal:
+                <a class="text-dark" href="#">fotbal.com</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

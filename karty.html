@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotbal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/flag-icons/css/flag-icons.min.css">
+    <style>
+        .footer {
+            background-color: lightgray;
+            text-align: center;
+            padding: 10px;
+        }
+        .card {
+            margin-bottom: 20px;
+            height: 100%; /* Ensure cards take full height */
+            position: relative;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .card-img-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .fi {
+            font-size: 2rem;
+            border: solid 1.5px black;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .main {
+            flex: 1;
+        }
+        .row-equal-height {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .col-equal-height {
+            display: flex;
+            flex: 1 0 33.3333%; /* Ensure three cards per row on large screens */
+            max-width: 33.3333%;
+            padding: 15px;
+        }
+        .card-img {
+            height: auto;
+            max-height: 100%;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+        }
+
+
+        .flag-top-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 1px; /* Adjust as needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Hlavní stránka</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carousel.html">Carousel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tabulka.html">Tabulka</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="karty.html">Karty</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+
+        <!-- Main content -->
+        <div class="main container">
+            <div class="row row-equal-height">
+                <div class="col-12 col-md-6 col-lg-4 col-equal-height">
+                    <div class="card">
+                        <div class="card-img-overlay flag-top-left">
+                            <span class="fi fi-cz"></span>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-6 card-img-container d-flex align-items-center">
+                                <img src="obrazky/players/player2.png" class="card-img" alt="Player 1">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Moses Amasi</h5>
+                                    <p class="card-text">Útočník</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-equal-height">
+                    <div class="card">
+                        <div class="card-img-overlay flag-top-left">
+                            <span class="fi fi-cz"></span>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-6 card-img-container d-flex align-items-center">
+                                <img src="obrazky/players/player1.png" class="card-img" alt="Player 2">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lukáš Fraštil</h5>
+                                    <p class="card-text">Obrana (střední)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-equal-height">
+                    <div class="card">
+                        <div class="card-img-overlay flag-top-left">
+                            <span class="fi fi-cz"></span>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-6 card-img-container">
+                                <img src="obrazky/players/player3.png" class="card-img" alt="Player 3">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tomáš Digaňa</h5>
+                                    <p class="card-text">Brankář</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-equal-height">
+                    <div class="card">
+                        <div class="card-img-overlay flag-top-left">
+                            <span class="fi fi-cz"></span>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-6 card-img-container">
+                                <img src="obrazky/players/player4.png" class="card-img" alt="Player 4">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Adam Dohnálek</h5>
+                                    <p class="card-text">Obrana (střední) </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-equal-height">
+                    <div class="card">
+                        <div class="card-img-overlay flag-top-left">
+                            <span class="fi fi-cz"></span>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-6 card-img-container">
+                                <img src="obrazky/players/player8.png" class="card-img" alt="Player 5">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Jiří Sláma</h5>
+                                    <p class="card-text">obrana (levý bok) </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-equal-height">
+                    <div class="card">
+                        <div class="card-img-overlay flag-top-left">
+                            <span class="fi fi-cz"></span>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-6 card-img-container">
+                                <img src="obrazky/players/player9.png" class="card-img" alt="Player 5">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tadeáš Stoppen</h5>
+                                    <p class="card-text">brankář </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-equal-height">
+                    <div class="card">
+                        <div class="card-img-overlay flag-top-left">
+                            <span class="fi fi-cz"></span>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-6 card-img-container">
+                                <img src="obrazky/players/player6.png" class="card-img" alt="Player 5">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Jiří Spáčil </h5>
+                                    <p class="card-text">obrana </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-equal-height">
+                    <div class="card">
+                        <div class="card-img-overlay flag-top-left">
+                            <span class="fi fi-cz"></span>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-6 card-img-container">
+                                <img src="obrazky/players/player5.png" class="card-img" alt="Player 5">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Matěj Hadaš</h5>
+                                    <p class="card-text">záložník </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 col-equal-height">
+                    <div class="card">
+                        <div class="card-img-overlay flag-top-left">
+                            <span class="fi fi-cz"></span>
+                        </div>
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-md-6 card-img-container">
+                                <img src="obrazky/players/player7.png" class="card-img" alt="Player 5">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Yunusa Muritala </h5>
+                                    <p class="card-text">Křídlo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for other players -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer bg-light text-center text-lg-start">
+            <div class="text-center p-3">
+                © 2023 Fotbal:
+                <a class="text-dark" href="#">fotbal.com</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

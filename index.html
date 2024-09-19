@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotbal</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/flag-icons/css/flag-icons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            background-color: #007bff; /* Blue background color */
+            overflow: hidden; /* Prevent scrolling */
+        }
+        .content {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .main {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            display: flex;
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            text-align: center; /* Center text */
+        }
+        .welcome-text {
+            font-family: 'Roboto', sans-serif; /* Apply Google Font */
+            font-size: 2.5rem; /* Larger font size */
+            font-weight: 700; /* Bulkier font weight */
+            color: #fff; /* White color for contrast */
+            padding: 20px; /* Optional padding for better appearance */
+            z-index: 2; /* Ensure text is above carousel items */
+            position: relative; /* Ensure z-index works */
+        }
+        .footer {
+            background-color: lightgray;
+            text-align: center;
+            padding: 10px;
+        }
+        #carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* Ensure carousel is below the text */
+        }
+        .carousel-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity 1s ease-in-out;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .carousel-item.background {
+            background-color: #007bff; /* Blue background color */
+        }
+        .carousel-item.fade {
+            opacity: 0;
+        }
+        .carousel-item.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Hlavní stránka</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carousel.html">Carousel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tabulka.html">Tabulka</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="karty.html">Karty</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main content -->
+        <div class="main">
+            <div id="carousel">
+                <div class="carousel-item background active">
+                    <!-- Background color -->
+                </div>
+                <div class="carousel-item fade">
+                    <img src="bubak.jpg" alt="Bubak">
+                </div>
+            </div>
+            <div class="welcome-text">
+                Vítejte na oficiální SK Sigma Olomouc stránce
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer bg-light text-center text-lg-start">
+            <div class="text-center p-3">
+                © 2023 Fotbal:
+                <a class="text-dark" href="#">fotbal.com</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const items = document.querySelectorAll('.carousel-item');
+            let currentIndex = 0;
+
+            function showItem(index) {
+                items.forEach((item, i) => {
+                    item.classList.toggle('active', i === index);
+                    item.classList.toggle('fade', i !== index);
+                });
+            }
+
+            function cycleItems() {
+                setInterval(() => {
+                    showItem(currentIndex);
+                    currentIndex = (currentIndex + 1) % items.length;
+                }, 10000); // 10 seconds interval
+            }
+
+            function startCycle() {
+                setTimeout(() => {
+                    showItem(1); // Show image after 9 seconds
+                    setTimeout(() => {
+                        showItem(0); // Hide image after 1 second
+                    }, 100); // Image stays for 1 second
+                }, 5000); // 9 seconds delay
+            }
+
+            startCycle();
+            cycleItems();
+        });
+    </script>
+</body>
+</html>
